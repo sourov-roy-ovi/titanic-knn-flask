@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Titanic Survival Predictor</title>
+
+    <!-- IMPORTANT -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="card">
+    <h1>Titanic Survival Prediction</h1>
+
+    <input type="number" id="pclass" placeholder="Passenger Class (1/2/3)">
+
+    <select id="sex">
+        <option value="0">Male</option>
+        <option value="1">Female</option>
+    </select>
+
+    <input type="number" id="age" placeholder="Age">
+    <input type="number" id="fare" placeholder="Fare">
+
+    <button onclick="predict()">Predict</button>
+
+    <h2 id="result"></h2>
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
